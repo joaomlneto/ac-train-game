@@ -1,0 +1,8 @@
+
+	            G L O B A L   R E F E R E N C E S
+
+	             Name               Value        Type
+	==============================|=======|===============
+	StrPos                           8000         VARIABLE
+	String                           8001           STRING
+	Fim                              000D            LABEL

@@ -1,0 +1,27 @@
+SBR <- CAR + 1, CAR <- F2
+R09 <- 0040h
+R10 <- 0004h
+EA  <- 0001h
+R10 <- COM(R10)
+EA  <- COM(EA)
+Ciclo:
+R08 <- M[RD]	< load caracter
+M[R10] <- SD	< cursor
+M[EA] <- R08	< escrever caracter
+SD <- SD + 1	< incrementar cursor
+RD <- RD + 1	< incrementar ponteiro string
+R09 <- R09 - 1	< decrementar contador
+!z?CAR<-I2OP6
+R09 <- 0040h
+RD <- RD - R09
+CAR <- WB
+
+
+R08 - .. - Caracter da String a Escrever
+R09 - .. - Contador de Caracteres Escritos
+R10 - .. - Addr Porto Controlo
+R11 - SD - (Input: Cursor)
+R12 - EA - Addr Porto Escrita
+R13 - RD X (Input: Endereço String)
+R14 - SP X
+R15 - PC X
